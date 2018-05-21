@@ -1,4 +1,4 @@
-# PARLOMA Cloud Interface (CI)
+# PARLOMA Cloud Interface (CI)
 
 This Repo contains the PARLOMA Cloud Interface, the main component to run on the Raspberry Pi to Enable
 the Raspberry Pi to connect and Interact with the PARLOMA Cloud Platform.
