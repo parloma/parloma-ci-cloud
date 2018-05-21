@@ -1,0 +1,15 @@
+<launch>
+    <node name="left_hand_driver" pkg="rosserial_python" type="serial_node.py">
+        <param name="port" value="/dev/ttyACM0" />
+        <remap from="right_hand" to="/left/hand" />
+    </node>
+
+    <node name="right_hand_driver" pkg="rosserial_python" type="serial_node.py">
+        <param name="port" value="/dev/ttyACM1" />
+        <remap from="right_hand" to="/right/hand" />
+    </node>
+
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+        <arg name="port" value="8080"/>
+    </include>
+</launch>
